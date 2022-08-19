@@ -1,6 +1,7 @@
 import axios from "axios";
 
-axios.get("http://localhost:3000").then((res) => {
+axios.get("http://localhost:3001").then((res) => {
+  // console.log(res);
   const [firstEl, ...rest] = res.data.split("\r\n");
   const first = firstEl.split(",");
   const arrValue = rest.map((el, i, arr) => {
